@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                terapia: {
+                    blue: '#4FADCF',
+                    green: '#83C5BE',
+                    yellow: '#F4D06F',
+                    orange: '#FF9F1C',
+                    purple: '#9F86C0',
+                    lightBlue: '#E0F5FF'
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +93,25 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'float': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)'
+                    },
+                    '50%': {
+                        transform: 'translateY(-10px)'
+                    }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'float': 'float 4s ease-in-out infinite'
+			},
+            fontFamily: {
+                'poppins': ['Poppins', 'sans-serif'],
+                'comfort': ['Comfortaa', 'cursive']
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
